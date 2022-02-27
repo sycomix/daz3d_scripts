@@ -1,0 +1,15 @@
+// DAZ Studio version 4.20.0.2 filetype DAZ Script
+
+var oCamera = new DzBasicCamera();
+oCamera.setName("Full HD Camera");
+oCamera.setType(DzCamera.GENERAL_CAMERA);
+
+var prop = oCamera.findProperty( "HeadlampMode" );   
+if( prop )  {   
+	prop.setValue( 2 ); //Auto = 0, On = 1, Off = 2;  } 
+}
+
+oCamera.useLocalDimensions = true;
+oCamera.applyDimensionsPreset("Full HD [FHD] / 1080p (16:9, 1920 x 1080)")
+
+Scene.addNode(oCamera);
